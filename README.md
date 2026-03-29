@@ -1,2 +1,2 @@
 # LangChainDemo
-LangChain学习
+LangChain学习及相关案例笔记
