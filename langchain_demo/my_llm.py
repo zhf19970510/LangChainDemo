@@ -10,12 +10,20 @@ from env_utils import OPENAI_API_KEY, OPENAI_BASE_URL, LOCAL_BASE_URL, DEEPSEEK_
 #     base_url=OPENAI_BASE_URL
 # )
 
+# deepseek大模型
 llm = ChatOpenAI(
-    model='claude-opus-4-6',
+    model='deepseek-chat',
     temperature=0.8,
     api_key=OPENAI_API_KEY,
     base_url=OPENAI_BASE_URL
 )
+
+# llm = ChatOpenAI(
+#     model='claude-opus-4-6',
+#     temperature=0.8,
+#     api_key=OPENAI_API_KEY,
+#     base_url=OPENAI_BASE_URL
+# )
 
 # llm = ChatOpenAI(
 #     model='deepseek-reasoner',
