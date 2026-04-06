@@ -52,6 +52,11 @@ llm = ChatOpenAI(
 #     # extra_body={'chat_template_kwargs': {'enable_thinking': True}},
 # )
 
+multiModal_llm = ChatOpenAI(  # 多模态大模型
+    model='Qwen2.5-Omni-3B',
+    api_key='xx',  # 私有化部署的，可以不填
+    base_url=LOCAL_BASE_URL,
+)
 
 message = [
     ('system', '你是一个智能助手。'),
