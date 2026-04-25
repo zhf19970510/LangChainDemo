@@ -1,6 +1,7 @@
 from langchain_openai import ChatOpenAI
 
-from env_utils import OPENAI_API_KEY, OPENAI_BASE_URL, LOCAL_BASE_URL, DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL
+from env_utils import OPENAI_API_KEY, OPENAI_BASE_URL, LOCAL_BASE_URL, DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, \
+    ALIBABA_API_KEY, ALIBABA_API_URL
 
 # openai的大模型
 # llm = ChatOpenAI(
@@ -10,13 +11,20 @@ from env_utils import OPENAI_API_KEY, OPENAI_BASE_URL, LOCAL_BASE_URL, DEEPSEEK_
 #     base_url=OPENAI_BASE_URL
 # )
 
-# deepseek大模型
 llm = ChatOpenAI(
-    model='deepseek-chat',
+    model='qwen3.6-plus',
     temperature=0.8,
-    api_key=OPENAI_API_KEY,
-    base_url=OPENAI_BASE_URL
+    api_key=ALIBABA_API_KEY,
+    base_url=ALIBABA_API_URL,
 )
+
+# deepseek大模型
+# llm = ChatOpenAI(
+#     model='deepseek-chat',
+#     temperature=0.8,
+#     api_key=OPENAI_API_KEY,
+#     base_url=OPENAI_BASE_URL
+# )
 
 # llm = ChatOpenAI(
 #     model='claude-opus-4-6',
